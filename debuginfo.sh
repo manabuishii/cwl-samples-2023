@@ -3,7 +3,7 @@ DEBUGFILE=debuginfo.txt
 
 touch ${DEBUGFILE}
 date 2>> ${DEBUGFILE}
-hostoname 2>> ${DEBUGFILE}
+hostname 2>> ${DEBUGFILE}
 whoami 2>> ${DEBUGFILE}
 id 2>> ${DEBUGFILE}
 df -h 2>> ${DEBUGFILE}
