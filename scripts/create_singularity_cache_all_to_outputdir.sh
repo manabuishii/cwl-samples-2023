@@ -6,7 +6,7 @@ if [ "$#" -ne 2 ]; then
   exit 1
 fi
 # this script MUST be set CWL_SINGULARITY_CACHE
-OUTPUTDIR= $1
+OUTPUTDIR=$1
 mkdir -p ${OUTPUTDIR}
 #
 CWLDIR=$2
