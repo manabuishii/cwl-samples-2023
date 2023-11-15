@@ -1,0 +1,3 @@
+infile:  # type 'File'
+    class: File
+    path: /home/manabu/work/CWL/cwl-samples-2023/debuginfo.sh
