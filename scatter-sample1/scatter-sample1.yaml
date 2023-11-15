@@ -1,0 +1,7 @@
+params:
+  - param1: "aaa"
+    param2: "bbb"
+  - param1: "ccc"
+    param2: "ddd"
+  - param1: "eee"
+    param2: "fff"
