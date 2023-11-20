@@ -1,0 +1,7 @@
+input_files:  # array of type "File"
+  - class: File
+    path: ../eee_fff.txt
+  - class: File
+    path: ../ggg_hhh.txt
+  - class: File
+    path: hello.txt
