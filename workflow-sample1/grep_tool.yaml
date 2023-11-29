@@ -1,0 +1,4 @@
+inputFile:  # type "File"
+    class: File
+    path: Tools/grep_tool.cwl
+grepPattern: type  # type "string"
