@@ -47,7 +47,56 @@ drwxr-xr-x 2 manabu manabu 4096 Dec  7 15:56 outdir_just_created_directory
 
 ### 入力がファイルで出力がファイル
 
+入力がファイルで、lsし、その結果をファイルとして回収するサンプル
 
+```
+cwltool ls1.cwl  ls1.yaml
+```
+
+実行後
+
+```
+cat ls1_result_file.txt
+```
+
+
+#### わざとエラーを出すサンプル
+
+`ls1_error.cwl`
+
+このファイルの問題点は２つ
+
+
+- `inputs`ではなくて`input`となっている。
+- `shellQuote`がない
+  - このため、`input`を`inputs`にしてもエラーがでる。
+
+
+```diff
+(cwltool-venv3) ➜  change_outputdir git:(main) ✗ diff -u ls1_error.cwl ls1.cwl 
+--- ls1_error.cwl       2023-12-07 16:35:09.664250352 +0900
++++ ls1.cwl     2023-12-07 16:43:43.487584135 +0900
+@@ -2,6 +2,7 @@
+ class: CommandLineTool
+ requirements:
+   InlineJavascriptRequirement: {}
++  ShellCommandRequirement: {}
+ baseCommand: [ls] # ここにコマンドを指定
+ 
+ inputs:
+@@ -14,9 +15,11 @@
+     inputBinding:
+       position: 2
+       prefix: ">"
++      shellQuote: false
+ 
+ outputs:
+   - id: output_file
+     type: File
+     outputBinding:
+-      glob: $(input.dest_filename)
++      glob: $(inputs.dest_filename)
+```
 
 ### 入力が文字列で、出力がファイル
 
