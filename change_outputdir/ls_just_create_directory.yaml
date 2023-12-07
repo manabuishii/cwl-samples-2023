@@ -1,0 +1,5 @@
+srcfile:  # type "File"
+    class: File
+    path: 56.txt 
+newname: newfile_5_6.txt  # type "string"
+out_dir: outdir_just_created_directory

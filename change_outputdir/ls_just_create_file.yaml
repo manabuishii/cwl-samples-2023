@@ -1,0 +1,4 @@
+srcfile:  # type "File"
+    class: File
+    path: 56.txt 
+newname: newfile_7_8.txt  # type "string"
