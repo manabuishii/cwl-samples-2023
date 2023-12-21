@@ -1,0 +1,7 @@
+dest_filename: ls3.output.txt  # type "string"
+input_file:  # type "File"
+    class: File
+    path: input.file.txt
+dest_dir: topdir2 # type "string"
+dest_dir2: subdir2_1
+dest_dir3: subdir2_2
