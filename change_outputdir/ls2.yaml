@@ -1,0 +1,5 @@
+dest_filename: bbb.txt  # type "string"
+input_file:  # type "File"
+    class: File
+    path: 56.txt
+dest_dir: aaa # type "string"

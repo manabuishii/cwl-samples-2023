@@ -100,4 +100,12 @@ cat ls1_result_file.txt
 
 ### 入力が文字列で、出力がファイル
 
+https://cwl.discourse.group/t/pass-writeable-output-directory-to-a-tool/19/15
+
+`dest_dir` が出来上がる
+
+```
+cwltool ls2.cwl ls2.yaml
+```
+
 ### 入力がファイルで、出力が異なるディレクトリに異なるファイル。
