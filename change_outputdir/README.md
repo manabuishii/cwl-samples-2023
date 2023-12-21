@@ -108,4 +108,12 @@ https://cwl.discourse.group/t/pass-writeable-output-directory-to-a-tool/19/15
 cwltool ls2.cwl ls2.yaml
 ```
 
+#### 入力が文字列、出力がファイル
+
+サブディレクトリを作っていく
+
+```
+cwltool ls3.cwl ls3.yaml
+```
+
 ### 入力がファイルで、出力が異なるディレクトリに異なるファイル。
