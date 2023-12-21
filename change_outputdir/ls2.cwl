@@ -13,20 +13,15 @@ baseCommand: [ls] # ここにコマンドを指定
 
 arguments:
   - $(inputs.input_file.path)
+  - valueFrom: $(">")
+    shellQuote: false
+  - $(inputs.dest_dir)/$(inputs.dest_filename)
 
 inputs:
   - id: input_file
     type: File
-    inputBinding:
-      position: 1
   - id: dest_filename
     type: string
-    inputBinding:
-      position: 2
-      prefix: "> aaa/"
-      # prefix: "> "+$(inputs.dest_dir)+"/"
-      separate: false
-      shellQuote: false
   - id: dest_dir
     type: string
 
