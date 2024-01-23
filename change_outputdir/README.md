@@ -132,3 +132,51 @@ cwltool cp4.cwl cp4.yaml
 ```
 cwltool cp5_dir.cwl cp5_dir.yaml
 ```
+
+## 入力がディレクトリ、出力がディレクトリ名由来のディレクトリ
+
+入力は1つのディレクトリが対象
+
+```
+cwltool cp6_dir_structure_from_name.cwl cp6_dir_structure_from_name.yaml
+```
+
+```
+$ tree all
+all
+└── GCF
+    └── 000
+        └── 716
+            └── 785
+                └── dfast
+                    ├── resultdir
+                    │   └── sample2.txt
+                    └── sample.txt
+```
+
+## 入力がディレクトリのリスト、出力がディレクトリ名由来のディレクトリのリスト
+
+入力は複数のディレクトリが対象
+
+```
+cwltool  cp7_dir_structure_from_name_scatter.cwl cp7_dir_structure_from_name_scatter.yaml
+```
+
+```
+$ tree ccc
+ccc
+└── GCF
+    └── 000
+        ├── 716
+        │   └── 785
+        │       └── dfast
+        │           ├── resultdir
+        │           │   └── sample2.txt
+        │           └── sample.txt
+        └── 738
+            └── 775
+                └── dfast
+                    ├── resultdir
+                    │   └── sample3.txt
+                    └── sample.txt
+```

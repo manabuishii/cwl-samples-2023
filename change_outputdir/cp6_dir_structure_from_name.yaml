@@ -1,0 +1,5 @@
+outdir_prefix: all
+dest_dirname: dfast  # type "string"
+input_dir:  # type "File"
+    class: Directory
+    path: ./sampledata/GCF_000716785.1_ASM71678v1_genomic.fna
