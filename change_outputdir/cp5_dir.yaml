@@ -1,0 +1,7 @@
+dest_dirname: finaldestination  # type "string"
+input_dir:  # type "File"
+    class: Directory
+    path: ./cp5_input_dir
+dest_dir: topdir2 # type "string"
+dest_dir2: subdir2_1
+dest_dir3: subdir2_3
