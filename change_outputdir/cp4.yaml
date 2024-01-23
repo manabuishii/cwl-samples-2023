@@ -1,4 +1,3 @@
-dest_filename: ls3.output.txt  # type "string"
 input_file:  # type "File"
     class: File
     path: input.file.txt
