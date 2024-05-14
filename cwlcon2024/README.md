@@ -53,6 +53,15 @@ But toil aspect it is problem 8100000000 >  8000000000.
 If your cluster system has enough resource, I recommend `Gi` unit.
 Of course `Mi` `Ki` is recommended.
 
+#### Useful options 
+
+
+`--relax-path-checks`
+helps if file name has space, $ sign
+
+`--bypass-file-store`
+use symlink for inputs
+
 
 
 #### Debug 
