@@ -32,6 +32,29 @@ Toil will no longer warn about a missing XDG_RUNTIME_DIR (#4769)
 
 [Stop complaining about XDG\_RUNTIME\_DIR by adamnovak · Pull Request \#4769 · DataBiosphere/toil](https://github.com/DataBiosphere/toil/pull/4769)
 
+#### Toil Memory Unit difference 8G, 8Gi and Java Memory Unit
+
+In toil
+
+8G  is 8 * 1000 * 1000 * 1000 = 8000000000 bytes
+8Gi is 8 * 1024 * 1024 * 1024 = 8589934592 bytes
+
+In Java (ex. GATK)
+
+8G is 8 * 1024 * 1024 * 1024 = 8589934592 bytes
+
+There is difference between toil and Java when you specify `8G`.
+
+If Java uses less than 8G, there is no problem.
+But if Java program (ex GATK) tries to use 8100000000.
+From Java aspect it is okay 8100000000 < 8589934592.
+But toil aspect it is problem 8100000000 >  8000000000.
+
+If your cluster system has enough resource, I recommend `Gi` unit.
+Of course `Mi` `Ki` is recommended.
+
+
+
 #### Debug 
 
 [Allow debugging jobs by name \(and status improvements\) by adamnovak · Pull Request \#4840 · DataBiosphere/toil](https://github.com/DataBiosphere/toil/pull/4840)
