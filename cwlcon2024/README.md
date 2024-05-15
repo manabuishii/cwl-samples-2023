@@ -1,5 +1,19 @@
 # CWLCon2024 Examples
 
+## Table Of Contents
+- [CWLCon2024 Examples](#cwlcon2024-examples)
+  - [Table Of Contents](#table-of-contents)
+  - [command for slurm](#command-for-slurm)
+    - [Toil will no longer warn about a missing XDG\_RUNTIME\_DIR](#toil-will-no-longer-warn-about-a-missing-xdg_runtime_dir)
+      - [Download singularity images before run.](#download-singularity-images-before-run)
+      - [Toil Memory Unit difference 8G, 8Gi and Java Memory Unit](#toil-memory-unit-difference-8g-8gi-and-java-memory-unit)
+      - [Useful options](#useful-options)
+      - [WORKAROUND for qacct is slow](#workaround-for-qacct-is-slow)
+        - [setup](#setup)
+      - [Debug](#debug)
+
+
+
 ## command for slurm
 
 ```
