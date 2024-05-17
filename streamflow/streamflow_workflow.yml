@@ -1,0 +1,20 @@
+version: v1.0
+workflows:
+  hello:
+    type: cwl
+    config:
+      file: hello_world_workflow.cwl
+    bindings:
+      - step: /step1
+        target:
+          model: slurmenv
+          service: example
+          workdir: WORKDIR_IS_HERE
+
+models:
+  slurmenv:
+    type: slurm
+    config:
+      maxConnections: 1
+      services:
+        example: {}
