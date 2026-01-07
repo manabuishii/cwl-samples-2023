@@ -58,14 +58,19 @@ sapporo                   1.6.2
 
 #### exec via sapporo with cwltool docker
 
-workflow_engine_parameters.json
+1. Create workflow_engine_parameters.json
+
 ```workflow_engine_parameters.json
 {}
 ```
 
+2. Download sample yaml (jobs parameter)
+
 ```
 curl -O https://raw.githubusercontent.com/manabuishii/cwl-samples-2023/main/scatter-sample1/scatter-sample1.yaml
 ```
+
+3. Submit Job
 
 ```
 curl -s -X POST \
